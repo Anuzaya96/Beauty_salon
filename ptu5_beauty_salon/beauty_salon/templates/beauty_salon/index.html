@@ -1,0 +1,8 @@
+{% extends 'beauty_salon/base.html' %}
+{% load static %}
+{% block title %}{{block.super}}{% endblock title %}
+{% block content %}
+<h1>Beauty salon</h1>
+    <li>Total orders: {{ orders_count }}</li>
+    <li>Total services provided: {{ services_count }}</li>
+{% endblock content %}
