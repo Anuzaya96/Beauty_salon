@@ -3,6 +3,9 @@
 {% block title %}{{block.super}}{% endblock title %}
 {% block content %}
 <h1>Beauty salon</h1>
+<ul>
     <li>Total orders: {{ orders_count }}</li>
     <li>Total services provided: {{ services_count }}</li>
+    <li>Visits: {{ visits_count }}</li>
+</ul>
 {% endblock content %}

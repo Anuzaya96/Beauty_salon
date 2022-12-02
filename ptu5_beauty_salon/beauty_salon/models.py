@@ -43,6 +43,15 @@ class Service(models.Model):
 class OrderLine(models.Model):
     quantity = models.IntegerField(_("quantity"), default=1)
     price = models.DecimalField(_("price"), max_digits=18, decimal_places=2)
+    master = models.ForeignKey(
+        User, 
+        verbose_name=_("master"), 
+        on_delete=models.CASCADE, 
+        related_name='order_lines',
+        null=True,
+        blank=True
+    )
+
     order = models.ForeignKey(
         Order,
         verbose_name=_("order"),

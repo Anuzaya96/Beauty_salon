@@ -1,15 +1,15 @@
 * {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+    font-family:Georgia, 'Times New Roman', Times, serif;
+ }
 
 body {
-    background-color: rgb(218, 236, 216);
+    background-color: rgba(213, 223, 212, 0.862);
+    /* background-image:url('/static/img/women.jpg'); */
     margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     min-height: 100vh;
-
 }
 
 header, main, footer {
@@ -42,3 +42,13 @@ header a {
     text-decoration: none;
 
 }
+
+/* main {
+    background-image:url('/static/img/women.jpg');
+    background-size: cover;
+    background-position: center center;
+    flex-grow: 1;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+} */

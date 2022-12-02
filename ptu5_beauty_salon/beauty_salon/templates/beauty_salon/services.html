@@ -1,0 +1,12 @@
+{% extends 'beauty_salon/base.html' %}
+{% load static %}
+{% block title %}{{block.super}}{% endblock title %}
+{% block content %}
+<h1>Services: </h1>
+    {% for service in service_list %}
+        <p>{{ service }}</p>
+    {% endfor %}
+{% endblock content %}
+
+
+
