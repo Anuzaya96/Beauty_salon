@@ -1,0 +1,10 @@
+{% extends 'beauty_service/base.html' %}
+{% load static%}
+{% block title %} {{ object }} {% endblock title %}
+{% block content %}
+<ul>
+    {% for order_line in object.order_lines.all %}
+    <li>{{ order_line }}</li>
+    {% endfor %}
+</ul>
+{% endblock content %}

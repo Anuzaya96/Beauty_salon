@@ -1,0 +1,8 @@
+{% extends 'beauty_salon/base.html' %}
+{% load static %}
+{% block title %}All orders: {{ block.super }}{% endblock title %}
+{% block content %}
+    {% for order in order_list %}
+    <li><a href="{# url '' #}">{{ order }}</a></li>
+    {% endfor %}
+{% endblock content %}
