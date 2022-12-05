@@ -15,6 +15,16 @@
             <a href="{% url 'index' %}">Home |</a>
             <a href="{% url 'salon_services' %}">Services |</a>
             <a href="{% url 'orders' %}">Orders |</a>
+            {% if user.is_authenticated %}
+                <span>{{ user }}</span>
+                <a href="{% url 'logout' %}">Logout |</a>
+                {% if user.is_superuser or user.is_staff %}
+                    <a href="{% url 'admin:index' %}">Admin |</a>
+                {% endif %}
+            {% else %}
+                <span></span>
+                <a href="{% url 'login' %}?next={{ request.path }}">Login</a>
+            {% endif %}
         {% endblock nav %}
         </div>
     </header>
