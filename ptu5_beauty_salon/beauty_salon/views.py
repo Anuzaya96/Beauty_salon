@@ -5,6 +5,7 @@ from . models import Client, Order, Service, OrderLine
 from django.views.generic.edit import FormMixin
 
 
+
 def index(request):
     visits_count = request.session.get('visits_count', 1)
     request.session['visits_count'] = visits_count + 1
@@ -34,6 +35,6 @@ class OrderListView(LoginRequiredMixin, ListView):
         return queryset
 
 
-class OrderDetailView(FormMixin, DetailView):
+class OrderDetailView(DetailView):
     model = Order
     template_name = 'beauty_salon/order_detail.html'

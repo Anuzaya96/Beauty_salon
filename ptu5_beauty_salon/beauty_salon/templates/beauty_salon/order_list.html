@@ -3,6 +3,6 @@
 {% block title %}All orders: {{ block.super }}{% endblock title %}
 {% block content %}
     {% for order in order_list %}
-    <li><a href="{# url '' #}">{{ order }}</a></li>
+    <li><a href="{% url 'order' order.pk %}">{{ order }}</a></li>
     {% endfor %}
 {% endblock content %}
