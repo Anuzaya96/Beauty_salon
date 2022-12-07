@@ -2,9 +2,21 @@
 {% load static%}
 {% block title %} {{ object }} {% endblock title %}
 {% block content %}
-<ul>
+<h1>Order {{ object.id }}</h1>
+<p>Date: {{ order.date }}</p>
+<div class="table-grid my-orders-table">
+    <div class="table-grid-cell">Provider </div>
+    <div class="table-grid-cell">Service </div>
+    <div class="table-grid-cell">Price</div>    
+    <div class="table-grid-cell">Quantity</div>
+    <div class="table-grid-cell">Total</div>
+
     {% for order_line in object.order_lines.all %}
-    <li>{{ order_line }}</li>
+        <div class="table-grid-cell">{{ order_line.master }}</div>
+        <div class="table-grid-cell">{{ order_line.service.name }}</div>
+        <div class="table-grid-cell">{{ order_line.price }}</div>
+        <div class="table-grid-cell">{{ order_line.quantity }}</div>
+        <div class="table-grid-cell">{{ order_line.total }}</div>
     {% endfor %}
-</ul>
+</div>
 {% endblock content %}

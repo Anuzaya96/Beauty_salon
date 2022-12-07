@@ -1,6 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from . models import Client, Order, Service, OrderLine
 from django.views.generic.edit import FormMixin
 
@@ -38,3 +38,8 @@ class OrderListView(LoginRequiredMixin, ListView):
 class OrderDetailView(DetailView):
     model = Order
     template_name = 'beauty_salon/order_detail.html'
+
+
+# class UserOrderCreateView(CreateView):
+#     model = OrderLine
+#     template_name  = 'beauty_salon/user_order_create.html'

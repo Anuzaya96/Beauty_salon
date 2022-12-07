@@ -1,0 +1,265 @@
+* {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+ }
+
+body {
+    background-color: rgb(185, 189, 185);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+
+}
+
+header, main, footer {
+    min-width: fit-content;
+}
+
+header {
+    background-color:  #445;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+header .container span {
+    align-self: center;
+    color: #ccc;
+    padding: 0.5rem;
+}
+
+header a {
+    display: inline-block;
+    color: #cef;
+    padding: 0.5rem;
+    text-decoration: none;
+
+}
+
+header a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    flex-grow: 1;
+}
+.container {
+    background-color: rgba(255, 255, 255, 0.2);
+    max-width: 1200px;
+    min-width: 480px;
+    margin: 0 auto;
+    
+}
+
+h1, h2, h3, p {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem  0;
+}
+
+h1, h2, h3 {
+    background-color: #fff;
+    border-bottom: 3px solid #236;
+}
+
+footer {
+    background-color: #abd;
+}
+
+footer .container {
+    display: flex;
+    align-content: stretch;
+}
+
+ul {
+    list-style: none;
+    padding: 0.5rem 1rem;
+}
+
+ul li {
+    padding: 0.2rem 1rem;
+}
+
+ul li a{
+    color: #236;
+}
+
+ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2)
+}
+
+ul.order_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+table {
+    margin: 0.5rem 1rem;
+}
+
+.form-error {
+    border: 3xp solid rgb(79, 31, 31);
+    background-color: rgb(183, 123, 12);
+
+}
+
+.table-grid {
+    display: grid;
+    padding: 0.5rem;
+}
+
+.my-orders-table {
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+}
+
+.table-grid-cell {
+    display: inline-block;
+    align-self: stretch;
+    background-color: #fff;
+    justify-self: stretch;
+    padding: 0.5rem;
+    border-bottom: 1px solid #999;
+}
+
+.form-grid input {
+    width: 15%;
+}
+
+.center {
+    text-align: center;
+}
+
+.dark {
+    background-color: #569;
+    color: #eee;
+}
+
+.overdue {
+    background-color: #f99;
+    color: #900;
+    font-weight: bold;
+}
+.alert {
+    padding: 0.5rem 1rem;
+    border: 3px solid #999;
+}
+.alert-error {
+    background-color: #f99;
+    color: #900;
+    border-color: #900;
+}
+.alert-success {
+    background-color: #afa;
+    color: #070;
+    border-color: #070;
+}
+.float-right {
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+    background-color: rgba(213, 223, 212, 0.862);
+    background-image:url('/static/img/women.jpg');
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+header, main, footer {
+    min-width: fit-content;
+}
+
+header {
+    background-color:  #445;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+header .container span {
+    align-self: center;
+    color: #ccc;
+    padding: 0.5rem;
+}
+
+header a {
+    display: inline-block;
+    color: #cef;
+    padding: 0.5rem;
+    text-decoration: none;
+
+}
+
+
+.table-grid {
+    display: grid;
+    padding: 0.5rem;
+}
+
+.my-orders-table {
+    grid-template-columns:  3fr 1fr 1fr;
+}
+
+.table-grid-cell {
+    display: inline-block;
+    align-self: stretch;
+    background-color: #fff;
+    justify-self: stretch;
+    padding: 0.5rem;
+    border-bottom: 1px solid #999;
+}
+
+
+.center {
+    text-align: center;
+}
+
+
+main {
+    background-image:url('/static/img/women.jpg');
+    background-size: cover;
+    background-position: center center;
+    flex-grow: 1;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+} */
