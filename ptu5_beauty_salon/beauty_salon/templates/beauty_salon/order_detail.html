@@ -2,6 +2,7 @@
 {% load static%}
 {% block title %} {{ object }} {% endblock title %}
 {% block content %}
+{% comment %} <p><a class="button" href="{% url 'user_create_an_order' %}">Add a service</a></p> {% endcomment %}
 <h1>Order {{ object.id }}</h1>
 <p>Date: {{ order.date }}</p>
 <div class="table-grid my-orders-table">

@@ -1,9 +1,9 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from . models import Client, Order, Service, OrderLine
 from django.views.generic.edit import FormMixin
-
+from django.urls import reverse_lazy
 
 
 def index(request):
@@ -35,11 +35,20 @@ class OrderListView(LoginRequiredMixin, ListView):
         return queryset
 
 
-class OrderDetailView(DetailView):
+class OrderDetailView(UserPassesTestMixin, LoginRequiredMixin, DetailView):
     model = Order
     template_name = 'beauty_salon/order_detail.html'
 
+    def test_func(self):
+        return self.get_object().client == self.request.user.client
 
-# class UserOrderCreateView(CreateView):
+
+# class UserOrderCreateView(LoginRequiredMixin, CreateView):
 #     model = OrderLine
-#     template_name  = 'beauty_salon/user_order_create.html'
+#     fields = ('service', 'master')
+#     template_name  = 'beauty_salon/user_create_order.html'
+#     success_url = reverse_lazy('user_orders')
+
+#     def form_valid(self, form):
+#         form.instance.price = form.instance.service.price
+#         return super().form_valid(form)

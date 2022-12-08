@@ -16,14 +16,14 @@
             <a href="{% url 'salon_services' %}">Services |</a>
             <a href="{% url 'orders' %}">Orders |</a>
             {% if user.is_authenticated %}
-                <span>{{ user }}</span>
-                <a href="{% url 'logout' %}">Logout |</a>
+                <a href="{% url 'profile' %}">{{ user }}</a>
                 {% if user.is_superuser or user.is_staff %}
                     <a href="{% url 'admin:index' %}">Admin |</a>
                 {% endif %}
+                <a href="{% url 'logout' %}">Logout</a>
             {% else %}
-                <span></span>
-                <a href="{% url 'login' %}{% if request.path != '/accounts/logout'%}{% endif %}?next={{ request.path }}">Login</a>
+                <a href="{% url 'register' %}">Register</a>
+                <a href="{% url 'login' %}{% if not '/accounts/' in request.path %}?next={{ request.path }}{% endif %}">Login</a>
             {% endif %}
         {% endblock nav %}
         </div>
