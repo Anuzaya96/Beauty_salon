@@ -1,16 +1,13 @@
 * {
     font-family:Georgia, 'Times New Roman', Times, serif;
-    
  }
 
 
- main {
+main {
     background-image:url('/static/img/women.jpg');
     background-size: cover;
     background-position: center center;
     flex-grow: 2;
-    /* margin-top: 4rem;
-    display: flex; */
     flex-direction: column;
     color:  rgb(235, 144, 52);
 } 
@@ -18,12 +15,18 @@
 .photos-block-grid {
     height: 100%;
     display: grid;
-    grid-gap: 5 px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "header header"
     "footer footer"
 }
+
+
+.photos-block-nails {
+    text-align: center;
+    background-color:  rgb(244, 207, 152);
+}
+
 
 body {
     background-color: rgb(235, 144, 52);
@@ -32,7 +35,6 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     min-height: 130vh;
-
 }
 
 header, main, footer {
@@ -61,7 +63,7 @@ header .container span {
 
 header a {
     display: inline-block;
-    color: #cef;
+    color: rgb(244, 207, 152);
     padding: 0.5rem;
     text-decoration: none;
 
@@ -74,12 +76,13 @@ header a:hover {
 main {
     flex-grow: 1;
 }
+
 .container {
-    background-color: rgba(255, 255, 255, 0.2);
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    background-color: rgba(255, 255, 255, 0.3);
     max-width: 1200px;
     min-width: 480px;
     margin: 0 auto;
-    
 }
 
 h1, h2, h3, p {
@@ -93,7 +96,7 @@ h1, h2, h3 {
 }
 
 footer {
-    background-color: #abd;
+    background-color: rgb(235, 144, 52);
 }
 
 footer .container {
@@ -154,7 +157,6 @@ table {
     justify-self: stretch;
     padding: 0.5rem;
     border-bottom: 1px solid #999;
-    /* background-color: rgb(236, 187, 124); */
 }
 
 
@@ -162,9 +164,6 @@ table {
     width: 15%;
 }
 
-/* .center {
-    text-align: center;
-} */
 
 .dark {
     background-color: rgb(236, 187, 124);
@@ -192,7 +191,6 @@ table {
 .float-right {
     float: right;
 }
-
 
 
 
