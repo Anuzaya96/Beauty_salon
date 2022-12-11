@@ -1,19 +1,43 @@
 * {
     font-family:Georgia, 'Times New Roman', Times, serif;
+    
  }
 
+
+ main {
+    background-image:url('/static/img/women.jpg');
+    background-size: cover;
+    background-position: center center;
+    flex-grow: 2;
+    /* margin-top: 4rem;
+    display: flex; */
+    flex-direction: column;
+    color:  rgb(235, 144, 52);
+} 
+
+.photos-block-grid {
+    height: 100%;
+    display: grid;
+    grid-gap: 5 px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "footer footer"
+}
+
 body {
-    background-color: rgb(185, 189, 185);
+    background-color: rgb(235, 144, 52);
     margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-height: 100vh;
+    min-height: 130vh;
 
 }
 
 header, main, footer {
     min-width: fit-content;
+    
 }
 
 header {
@@ -64,8 +88,8 @@ h1, h2, h3, p {
 }
 
 h1, h2, h3 {
-    background-color: #fff;
-    border-bottom: 3px solid #236;
+    background-color: rgb(236, 187, 124);
+    color: black;
 }
 
 footer {
@@ -114,10 +138,13 @@ table {
 .table-grid {
     display: grid;
     padding: 0.5rem;
+    color: black;
+    
 }
 
 .my-orders-table {
     grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+    
 }
 
 .table-grid-cell {
@@ -127,19 +154,20 @@ table {
     justify-self: stretch;
     padding: 0.5rem;
     border-bottom: 1px solid #999;
+    /* background-color: rgb(236, 187, 124); */
 }
+
 
 .form-grid input {
     width: 15%;
 }
 
-.center {
+/* .center {
     text-align: center;
-}
+} */
 
 .dark {
-    background-color: #569;
-    color: #eee;
+    background-color: rgb(236, 187, 124);
 }
 
 .overdue {
@@ -254,12 +282,3 @@ header a {
 }
 
 
-main {
-    background-image:url('/static/img/women.jpg');
-    background-size: cover;
-    background-position: center center;
-    flex-grow: 1;
-    margin-top: 4rem;
-    display: flex;
-    flex-direction: column;
-} */

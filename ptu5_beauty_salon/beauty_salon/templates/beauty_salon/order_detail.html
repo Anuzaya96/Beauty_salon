@@ -6,11 +6,11 @@
 <h1>Order {{ object.id }}</h1>
 <p>Date: {{ order.date }}</p>
 <div class="table-grid my-orders-table">
-    <div class="table-grid-cell">Provider </div>
-    <div class="table-grid-cell">Service </div>
-    <div class="table-grid-cell">Price</div>    
-    <div class="table-grid-cell">Quantity</div>
-    <div class="table-grid-cell">Total</div>
+    <div class="table-grid-cell center dark">Provider </div>
+    <div class="table-grid-cell center dark">Service </div>
+    <div class="table-grid-cell center dark">Price</div>    
+    <div class="table-grid-cell center dark">Quantity</div>
+    <div class="table-grid-cell center dark">Total</div>
 
     {% for order_line in object.order_lines.all %}
         <div class="table-grid-cell">{{ order_line.master }}</div>

@@ -1,7 +1,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from . models import Client, Order, Service, OrderLine
+from . models import Client, Order, Service, Master
 from django.views.generic.edit import FormMixin
 from django.urls import reverse_lazy
 
@@ -41,6 +41,11 @@ class OrderDetailView(UserPassesTestMixin, LoginRequiredMixin, DetailView):
 
     def test_func(self):
         return self.get_object().client == self.request.user.client
+
+
+def gallery(request):
+    masters = Master.objects.all()
+    return render(request, 'beauty_salon/gallery.html', {'masters': masters})
 
 
 # class UserOrderCreateView(LoginRequiredMixin, CreateView):

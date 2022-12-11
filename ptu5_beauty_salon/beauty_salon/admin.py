@@ -17,6 +17,8 @@ class OrderLineAdmin(admin.ModelAdmin):
     list_display = ('service', 'order', 'price', 'quantity')
 
 
+admin.site.register(models.Master)
+admin.site.register(models.GalleryPhoto)
 admin.site.register(models.Client, ClientAdmin)
 admin.site.register(models.Order, OrderAdmin)
 admin.site.register(models.Service, ServiceAdmin)

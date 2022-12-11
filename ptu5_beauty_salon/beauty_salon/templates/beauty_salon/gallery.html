@@ -1,0 +1,15 @@
+{% extends 'beauty_salon/base.html' %}
+{% load static%}
+{% block title %}Gallery{{block.super}}{% endblock title %}
+{% block content %}
+<h1>Gallery</h1>
+{% for master in masters %}
+    <h4> {{ master.user }}</h4>
+    <p>{{ master.description }}</p>
+    <div class="photos-block-grid">
+        {% for photo in master.user.gallery_photos.all %}
+            <div class="photos-block-nails"><img src="{{ photo.photo.url }}" width="270" alt="{{ photo.master }}" class="center"></div>
+        {% endfor %}
+    </div>
+{% endfor %}
+{% endblock content %}
